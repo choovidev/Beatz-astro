@@ -1,0 +1,36 @@
+---
+import { Image } from 'astro:assets';
+import Header from './Header.astro';
+---
+<footer>
+    <!--Contenedor para alinear a la izquierda la imagen y la información de la canción-->
+    <div class="footer-left">
+      <!--Contenedor que agrupa la imagen y los detalles-->
+      <div class="song-info">
+        <img
+          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS9YWkWHTRuvn8LK5dh-JRJmhemrNUiGGd3gw&s"
+          alt="Album Cover"
+          class="album-cover"
+        />
+        <div class="song-details">
+          <!--Titulo de la canción-->
+          <div class="song-title">Nombre de la Canci&oacute;n</div>
+          <!--Artista de la canción-->
+          <div class="song-artist">Artista</div>
+        </div>
+      </div>
+    </div>
+    <!--Contenedor para los controles de la canción-->
+    <div class="footer-controls">
+      <!--Boton de reproducción-->
+      <button class="control">&#9829;</button>
+      <!--Boton de reproducción hacia atrás-->
+      <button class="control">&lt;</button>
+      <!--Boton de reproducción play/pause-->
+      <button class="control">&#9654;</button>
+      <!--Boton de reproducción hacia adelante-->
+      <button class="control">&gt;</button>
+      <!--Boton de agregar canción-->
+      <button class="control">&#43;</button>
+    </div>
+  </footer>

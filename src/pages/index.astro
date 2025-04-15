@@ -1,11 +1,91 @@
 ---
-import Welcome from '../components/Welcome.astro';
-import Layout from '../layouts/Layout.astro';
-
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import '../styles/global.css';
 ---
 
-<Layout>
-	<Welcome />
-</Layout>
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<meta charset="UTF-8" />
+     <!--Viewport para el diseño responsive-->
+     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+     <!--Fuente de google-->
+     <link
+       href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap"
+       rel="stylesheet"/>
+    <Header />
+		<title>BΞΛTZ</title>
+	</head>
+  <body>
+    <main>
+      <!--Galeria de discos-->
+      <div class="gallery-container">
+        <!--Primera galeria de discos-->
+        <h4>Para ti</h4>
+        <div class="gallery-section">
+          <!--Boton de flecha izquierda-->
+          <button class="arrow left">&#9664;</button>
+          <!--Columna de discos-->
+          <div class="column">
+            <!--Disco 1-->
+            <div class="image">
+				<img src="/img/1.jpg" alt="Album Cover" />
+            </div>
+            <!--Disco 2-->
+            <div class="image">
+              <img src="/img/2.jpg" alt="Album Cover" />
+            </div>
+            <!--Disco 3-->
+            <div class="image">
+            <img src="/img/3.jpg" alt="Album Cover"  />
+            </div>
+            <!--Disco 4-->
+            <div class="image">
+              <img src="/img/4.jpg" alt="Album Cover"  />
+            </div>
+            <!--Disco 5-->
+            <div class="image">
+              <img src="/img/5.jpg" alt="Album Cover"  />
+            </div>
+          </div>
+          <!--Boton de flecha derecha-->
+          <button class="arrow right">&#9654;</button>
+        </div>
+        <!--Segunda galeria de discos-->
+        <h4>Explorar</h4>
+        <div class="gallery-section">
+          <!--Boton de flecha izquierda-->
+          <button class="arrow left">&#9664;</button>
+          <!--Columna de discos-->
+          <div class="column">
+            <!--Disco 1-->
+            <div class="image">
+              <img src="/img/6.jpg" alt="Album Cover" />
+            </div>
+            <!--Disco 2-->
+            <div class="image">
+              <img src="/img/7.jpg" alt="Album Cover"  />
+            </div>
+            <!--Disco 3-->
+            <div class="image">
+              <img src="/img/8.jpg" alt="Album Cover"  />
+            </div>
+            <!--Disco 4-->
+            <div class="image">
+              <img src="/img/9.jpg" alt="Album Cover" />
+            </div>
+            <!--Disco 5-->
+            <div class="image">
+              <img src="/img/10.jpg" alt="Album Cover"  />
+            </div>
+          </div>
+          <!--Boton de flecha derecha-->
+          <button class="arrow right">&#9654;</button>
+        </div>
+      </div>
+    </main>
+    <!--Footer de la pagina-->
+    <Footer />
+  </body>
+</html>
