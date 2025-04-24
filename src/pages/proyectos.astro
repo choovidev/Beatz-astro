@@ -1,0 +1,27 @@
+---
+import Layout from '../layouts/Layout.astro';
+import proyectos from '../data/proyectos.json';
+import '../styles/global.css';
+---
+
+<Layout>
+    <main>
+        <h1>Proyectos</h1>
+        <div class="proyectos-container">
+            {proyectos.map((proyecto) => (
+                <div class="proyecto">
+                    <h2>{proyecto.title}</h2>
+                    <p>{proyecto.description}</p>
+                </div>
+            ))}
+
+        </div>
+        <a href="/" class="volver-inicio">Volver al inicio</a>
+    </main>
+</Layout>
+
+
+
+
+
+

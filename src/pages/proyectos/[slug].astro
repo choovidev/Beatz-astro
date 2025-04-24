@@ -1,0 +1,25 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import proyectos from '../../data/proyectos.json';
+import styles from '../../styles/global.css';
+
+const { slug } = Astro.params;
+const proyecto = proyectos.find((proyecto) => proyecto.slug === slug);
+
+export async function getStaticPaths() {
+    return proyectos.map((proyecto) => ({
+        params: { slug: proyecto.slug },
+        props: { proyecto },
+    }));
+}
+---
+
+<Layout>
+    {proyecto && (
+        <main>
+            <h1>{proyecto.title}</h1>
+            <p>{proyecto.description}</p>
+        </main>
+    )}
+</Layout>
+

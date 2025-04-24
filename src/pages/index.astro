@@ -1,22 +1,12 @@
 ---
+import Layout from '../layouts/Layout.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import '../styles/global.css';
 ---
 
-<!DOCTYPE html>
-<html lang="es">
-	<head>
-		<meta charset="UTF-8" />
-     <!--Viewport para el diseño responsive-->
-     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-     <!--Fuente de google-->
-     <link
-       href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap"
-       rel="stylesheet"/>
-    <Header />
+<Layout>
 		<title>BΞΛTZ</title>
-	</head>
   <body>
     <main>
       <!--Galeria de discos-->
@@ -85,7 +75,4 @@ import '../styles/global.css';
         </div>
       </div>
     </main>
-    <!--Footer de la pagina-->
-    <Footer />
-  </body>
-</html>
+</Layout>

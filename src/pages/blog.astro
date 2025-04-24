@@ -1,0 +1,26 @@
+---
+import Layout from '../layouts/Layout.astro';
+import { getCollection } from 'astro:content';
+import '../styles/global.css';
+
+const posts = await getCollection('posts');
+---
+
+<Layout>
+    <div class="blog-container">
+        <h1 style="margin-top:100px; color: #ffffff;">Blog</h1>
+        <div class="posts-grid">
+            {posts.map((post) => (
+                <article class="post-card">
+                    <div class="card-content">
+                        <h2><a href={`/blog/${post.slug}`}>{post.data.title}</a></h2>
+                        <p class="post-date">{post.data.date}</p>
+                        <p class="post-description">{post.data.description}</p>
+                        <a href={`/blog/${post.slug}`} class="read-more">Leer más →</a>
+                    </div>
+                </article>
+            ))}
+        </div>
+    </div>
+</Layout>
+

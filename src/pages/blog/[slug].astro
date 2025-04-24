@@ -1,0 +1,30 @@
+---
+import Layout from '../../layouts/Layout.astro';
+const {slug} = Astro.params;
+import {getCollection, getEntry} from 'astro:content';
+import '../../styles/global.css';
+
+const post = await getEntry ('posts',slug);
+
+export async function getStaticPaths(){
+    const posts = await getCollection('posts');
+    return posts.map((post) => ({
+        params: { slug: post.slug },
+        props: { post },
+      }));
+}
+
+---
+
+<Layout>
+    <div class="post-content">
+    {post && (
+    <h1>{post.data.title}</h1>
+    <p>{post.data.description}</p>
+    <p>{post.data.date}</p>
+    <p>{post.body}</p>
+    )}
+    <a class="volver-blog" href="/blog">Volver al blog</a>
+    </div>
+</Layout>
+
