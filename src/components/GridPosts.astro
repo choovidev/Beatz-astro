@@ -1,0 +1,18 @@
+---
+import PostCard from './PostCard.astro';
+const { posts } = Astro.props;
+---
+
+<div class="grid">
+    {posts.map((post: any) => (
+        <PostCard title={post.data.title} description={post.data.description} url={`/blog/${post.slug}`} />
+    ))}
+</div>
+
+<style>
+    .grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+        gap: 20px;
+    }
+</style>

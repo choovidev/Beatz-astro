@@ -14,7 +14,8 @@
 │   │   ├── 7.jpg      # Imagen de proyecto 7
 │   │   ├── 8.jpg      # Imagen de proyecto 8
 │   │   ├── 9.jpg      # Imagen de proyecto 9
-│   │   └── 10.jpg     # Imagen de proyecto 10
+│   │   ├── 10.jpg     # Imagen de proyecto 10
+│   │   └── fotopruebaapi.jpg # Imagen de prueba API
 │   └── favicon.svg
 │
 ├── src/
@@ -24,7 +25,10 @@
 │   │
 │   ├── components/     # Componentes reutilizables
 │   │   ├── Header.astro
-│   │   └── Footer.astro
+│   │   ├── Footer.astro
+│   │   ├── PostCard.astro
+│   │   ├── Contador.jsx
+│   │   └── GridPosts.astro
 │   │
 │   ├── content/        # Contenido del sitio
 │   │   └── posts/      # Artículos del blog
@@ -43,6 +47,8 @@
 │   │   ├── contact.astro
 │   │   ├── blog.astro
 │   │   ├── proyectos.astro
+│   │   ├── fotos.astro
+│   │   ├── card.astro
 │   │   ├── blog/
 │   │   │   └── [slug].astro    # Página dinámica para artículos del blog
 │   │   └── proyectos/

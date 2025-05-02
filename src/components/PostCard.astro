@@ -1,0 +1,39 @@
+---
+const { title, description, url } = Astro.props;
+---
+<!-- Componente para mostrar las tarjetas de los posts -->
+<div class="grid">
+<article class="card">
+    <h2>{title}</h2>
+    <p>{description}</p>
+    <a href={url}>Leer más</a>
+</article>
+</div>
+<!-- Estilos para el componente PostCard -->
+<style>
+    .grid {
+        display: grid;
+        margin: 0 auto;
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    }
+    
+    .card {
+        background-color: #332c55;
+        padding: 20px;
+        border-radius: 20px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        border: 1px solid #ffffff;
+        margin-bottom: 20px;
+    }
+    article a {
+        color: #ffffff;
+        text-decoration: none;
+    }
+    article a:hover {
+        color: #000000;
+        background-color: #ffffff;
+        padding: 10px;
+        border-radius: 10px;
+    }
+    
+</style>
